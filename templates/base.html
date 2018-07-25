@@ -7,11 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
+
+    <style>
+        body{
+            background: #8cba4e;
+            font-family: sans-serif;
+        }
+
+        footer{
+            color: yellow;
+        }
+    </style>
+
 </head>
 <body>
     <h1>Tuirer</h1>
     <p>
-        {{ now|date:"d/n/Y" }}
+        {% block body %}
+        Hello.
+        {% endblock %}
     </p>
+    <footer>
+        {% block footer %}
+        Meu footer
+        {% endblock %}
+    </footer>
 </body>
 </html>

@@ -7,4 +7,4 @@ def index(request):
     context = {
         'now': datetime.now(),
     }
-    return render(request, 'index.html', context)
+    return render(request, 'home.html', context)
