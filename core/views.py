@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from .helpers import get_character_name, ip_info
 
-# Create your views here.
+def index(request):
+    country = ip_info('country_name')
+    flag = ip_info('flag')
+    flag_image = f'<img src="{flag}" width="120"/>'
+    return HttpResponse(f'Olá, direto de <b>{country}</b>{flag_image}')
