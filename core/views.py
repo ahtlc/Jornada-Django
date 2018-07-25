@@ -6,4 +6,4 @@ def index(request):
     country = ip_info('country_name')
     flag = ip_info('flag')
     flag_image = f'<img src="{flag}" width="120"/>'
-    return HttpResponse(f'Olá, direto de <b>{country}</b>{flag_image}')
+    return render(request, 'index.html')
