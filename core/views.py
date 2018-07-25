@@ -5,5 +5,10 @@ from .helpers import get_character_name, ip_info
 def index(request):
     country = ip_info('country_name')
     flag = ip_info('flag')
-    flag_image = f'<img src="{flag}" width="120"/>'
-    return render(request, 'index.html')
+    
+    context = {
+        'country': country,
+        'flag': flag,
+    }
+    
+    return render(request, 'index.html', context)
