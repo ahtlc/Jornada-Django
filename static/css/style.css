@@ -1,3 +1,7 @@
 body {
     background-color: yellowgreen;
 }
+
+.error {
+    color: red;
+}
